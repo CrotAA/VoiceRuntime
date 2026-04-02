@@ -1,0 +1,8 @@
+# Generic runtime deps for local ASR and voice services.
+# Torch / CUDA builds are intentionally not pinned here because they depend on the target machine.
+
+numpy
+websockets>=12
+soundfile
+funasr
+openwakeword

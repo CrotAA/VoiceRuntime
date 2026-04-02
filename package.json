@@ -1,0 +1,25 @@
+{
+  "name": "voiceruntime",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A lightweight browser voice runtime for local OpenAI-compatible models.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CrotAA/VoiceRuntime.git"
+  },
+  "bugs": {
+    "url": "https://github.com/CrotAA/VoiceRuntime/issues"
+  },
+  "homepage": "https://github.com/CrotAA/VoiceRuntime#readme",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "NODE_ENV=production node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "ws": "^8.20.0"
+  }
+}
