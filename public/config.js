@@ -17,7 +17,7 @@ window.VoiceRuntimeConfig = {
     }
   },
   deployment: {
-    // 这些信息会一起提交到仓库，适合放公开说明，不适合放私有地址或密钥。
+    // 详细配置
     profile: "generic",
     validatedHardware: "RTX 4090",
     validatedModels: {
