@@ -221,12 +221,6 @@ Python:
 - openWakeWord 模型说明: <https://github.com/dscripka/openWakeWord/tree/main/docs/models>
 - MeloTTS 官方仓库: <https://github.com/myshell-ai/MeloTTS>
 
-说明：
-
-- 当前配置里的 `Qwen/Qwen3.5-9B` 更像是你的本地推理后端暴露出来的模型标识。
-- 如果你的后端使用别的官方 Qwen 模型 ID，请直接修改 `.env` 中的 `VOICERUNTIME_MODEL`。
-- 发布仓库时不要包含任何第三方模型权重，包括 Qwen、FunASR、openWakeWord 或 MeloTTS 相关权重文件。
-
 ### 致谢
 
 感谢这些开源项目与团队：
@@ -237,34 +231,6 @@ Python:
 - [MeloTTS](https://github.com/myshell-ai/MeloTTS)
 - [ws](https://github.com/websockets/ws)
 
-### 开源协议建议
-
-仓库当前使用 `Apache-2.0`，原因是它与当前依赖兼容，并且比 MIT 多了明确的专利授权条款，更适合后续扩展。
-
-### 第三方许可证注意事项
-
-- `ws` 是 MIT
-- `FunASR` 代码仓库是 MIT，但具体模型权重可能是单独许可
-- `MeloTTS` 代码仓库是 MIT
-- `openWakeWord` 代码仓库是 Apache-2.0，但预训练模型需要单独确认许可
-- 如果你在 README 中推荐 Qwen，建议作为“已验证示例”，不要默认暗示重新分发模型权重
-
-最稳妥的方式：
-
-- 仓库只放代码和配置模板
-- 模型权重由用户按官方来源自行下载
-- 单独区分“代码许可证”和“模型许可证”
-
-### Github 发布前检查
-
-- `.env` 不要提交
-- 模型权重目录不要提交
-- 不要提交私有 API 地址、内网域名、令牌
-- 截图不要带内网信息
-
-仓库地址：
-
-- <https://github.com/CrotAA/VoiceRuntime>
 
 ## English
 
@@ -482,24 +448,6 @@ Thanks to these open-source projects and teams:
 - [MeloTTS](https://github.com/myshell-ai/MeloTTS)
 - [ws](https://github.com/websockets/ws)
 
-### License Recommendation
-
-This repository currently uses `Apache-2.0`. It is a good fit because it is compatible with the current dependencies and includes explicit patent grants, which is useful for future expansion.
-
-### Third-Party License Notes
-
-- `ws` is MIT
-- the FunASR code repository is MIT, but model weights may use separate licenses
-- the MeloTTS code repository is MIT
-- the openWakeWord code repository is Apache-2.0, but pretrained models should be checked separately
-- if you mention Qwen in the README, treat it as a validated example rather than implying model-weight redistribution
-
-Safest approach:
-
-- keep this repository code-only
-- let users download model weights from official sources
-- distinguish clearly between code licenses and model licenses
-
 ### Official Sources
 
 This repository does not ship third-party model weights. Users should download them from official sources:
@@ -512,19 +460,4 @@ This repository does not ship third-party model weights. Users should download t
 - openWakeWord model docs: <https://github.com/dscripka/openWakeWord/tree/main/docs/models>
 - MeloTTS official repository: <https://github.com/myshell-ai/MeloTTS>
 
-Notes:
 
-- `Qwen/Qwen3.5-9B` in this project should be treated as a local backend model identifier or deployment alias.
-- If your upstream server exposes a different official Qwen model ID, update `VOICERUNTIME_MODEL` in `.env`.
-- Do not publish model weight files with this repository, including Qwen, FunASR, openWakeWord, or MeloTTS weights.
-
-### Pre-Publish Checklist
-
-- do not commit `.env`
-- do not commit model weight directories
-- do not commit private API endpoints, internal domains, or tokens
-- do not include internal network details in screenshots
-
-Repository:
-
-- <https://github.com/CrotAA/VoiceRuntime>
